@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/WithdrawScene.unity
+    guid: c1e9474abebe5c54ca9122e99331288b
+  - enabled: 1
+    path: Assets/Scenes/DepositScene.unity
+    guid: e2c00c70e63f7cd42a7b2fa7ee3e0d5d
   m_configObjects: {}
