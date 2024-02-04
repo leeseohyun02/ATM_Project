@@ -28,6 +28,7 @@ public class Deposit : MonoBehaviour
         inputField.contentType = InputField.ContentType.IntegerNumber;
         inputField.onValueChanged.AddListener(TextChanged);
 
+
     }
 
     void Update()
@@ -72,7 +73,7 @@ public class Deposit : MonoBehaviour
 
     private void TextChanged(string text)
     {
-        if (!string.IsNullOrEmpty(text) && !float.TryParse(text,out _))
+        if (!string.IsNullOrEmpty(text) && !int.TryParse(text,out _))
         {
             inputField.text = "";
             

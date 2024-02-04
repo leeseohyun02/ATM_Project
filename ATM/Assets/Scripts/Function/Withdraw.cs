@@ -70,7 +70,7 @@ public class Withdraw : MonoBehaviour
 
     private void TextChanged(string text)
     {
-        if (!string.IsNullOrEmpty(text) && !float.TryParse(text, out _))
+        if (!string.IsNullOrEmpty(text) && !int.TryParse(text, out _))
         {
             inputField.text = "";
 
