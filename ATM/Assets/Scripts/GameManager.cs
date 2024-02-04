@@ -26,21 +26,21 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        UpdateText();
+        updateText();
     }
 
 
-    public void OnClickDeposit()
+    public void onClickDeposit()
     {
         SceneManager.LoadScene("DepositScene");
     }
 
-    public void OnClickWithdrow()
+    public void onClickWithdrow()
     {
         SceneManager.LoadScene("WithdrawScene");
     }
 
-    public void UpdateText()
+    public void updateText()
     {
         cashTxt.text = gameData.cash.ToString("#,##0");
         balanceTxt.text = gameData.balance.ToString("#,##0");

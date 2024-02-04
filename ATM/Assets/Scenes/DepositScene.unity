@@ -288,7 +288,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1167936368}
         m_TargetAssemblyTypeName: Deposit, Assembly-CSharp
-        m_MethodName: ThirtyThousand
+        m_MethodName: thirtyThousand
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -936,7 +936,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1167936368}
         m_TargetAssemblyTypeName: Deposit, Assembly-CSharp
-        m_MethodName: DirectinputBtn
+        m_MethodName: directinputBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2038,8 +2038,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5825d7aad63029f4db2d8ffc51d6a33e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputField: {fileID: 1415773327}
-  playerInput: 0
+  _inputField: {fileID: 1415773327}
+  _playerInput: 0
   gameData: {fileID: 11400000, guid: 9d2b287c4fa1730499f79f5c5f28dbb8, type: 2}
   cashTxt: {fileID: 2067312975}
   balanceTxt: {fileID: 1751705671}
@@ -2235,7 +2235,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1167936368}
         m_TargetAssemblyTypeName: Deposit, Assembly-CSharp
-        m_MethodName: TenThousand
+        m_MethodName: tenThousand
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2911,7 +2911,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1167936368}
         m_TargetAssemblyTypeName: Deposit, Assembly-CSharp
-        m_MethodName: FiftyThousand
+        m_MethodName: fiftyThousand
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3045,7 +3045,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1167936368}
         m_TargetAssemblyTypeName: Deposit, Assembly-CSharp
-        m_MethodName: OnCheckBtn
+        m_MethodName: onCheckBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4037,7 +4037,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1167936368}
         m_TargetAssemblyTypeName: Deposit, Assembly-CSharp
-        m_MethodName: OnClickBack
+        m_MethodName: onClickBack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

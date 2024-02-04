@@ -8,12 +8,12 @@ using UnityEngine.UI;
 public class Withdraw : MonoBehaviour
 {
 
-    [SerializeField] private InputField inputField;
-    [SerializeField] private int playerInput;
+    [SerializeField] private InputField _inputField;
+    [SerializeField] private int _playerInput;
 
-    private const int tenThousand = 10000;
-    private const int thirtyThousand = 30000;
-    private const int fiftyThousand = 50000;
+    private const int _tenThousand = 10000;
+    private const int _thirtyThousand = 30000;
+    private const int _fiftyThousand = 50000;
 
     public GameData gameData;
 
@@ -25,17 +25,17 @@ public class Withdraw : MonoBehaviour
 
     void Start()
     {
-        inputField.contentType = InputField.ContentType.IntegerNumber;
-        inputField.onValueChanged.AddListener(TextChanged);
+        _inputField.contentType = InputField.ContentType.IntegerNumber;
+        _inputField.onValueChanged.AddListener(textChanged);
 
     }
 
     void Update()
     {
-        UpdateText();
+        updateText();
     }
 
-    private void DepositAmount(int amount)
+    private void depositAmount(int amount)
     {
         if (gameData.balance < amount)
         {
@@ -48,49 +48,49 @@ public class Withdraw : MonoBehaviour
 
     }
 
-    public void TenThousand()
+    public void tenThousand()
     {
-        DepositAmount(tenThousand);
+        depositAmount(_tenThousand);
     }
 
-    public void ThirtyThousand()
+    public void thirtyThousand()
     {
-        DepositAmount(thirtyThousand);
+        depositAmount(_thirtyThousand);
     }
 
-    public void FiftyThousand()
+    public void fiftyThousand()
     {
-        DepositAmount(fiftyThousand);
+        depositAmount(_fiftyThousand);
     }
 
-    public void DirectinputBtn()
+    public void directinputBtn()
     {
-        DepositAmount(playerInput);
+        depositAmount(_playerInput);
     }
 
-    private void TextChanged(string text)
+    private void textChanged(string text)
     {
-        if (!string.IsNullOrEmpty(text) && !int.TryParse(text, out _))
+        if (!string.IsNullOrEmpty(text) && !float.TryParse(text, out _))
         {
-            inputField.text = "";
+            _inputField.text = "";
 
         }
-        playerInput = int.Parse(inputField.text);
+        _playerInput = int.Parse(_inputField.text);
 
     }
 
-    private void UpdateText()
+    private void updateText()
     {
         cashTxt.text = gameData.cash.ToString("#,##0");
         balanceTxt.text = gameData.balance.ToString("#,##0");
     }
 
-    public void OnCheckBtn()
+    public void onCheckBtn()
     {
         popUp.SetActive(false);
     }
 
-    public void OnClickBack()
+    public void onClickBack()
     {
         SceneManager.LoadScene("MainScene");
     }
