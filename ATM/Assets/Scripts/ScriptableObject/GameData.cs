@@ -7,6 +7,6 @@ public class GameData : ScriptableObject
 {
 
     public int cash;
-    public int balance;
+    public int banlance;
 
 }

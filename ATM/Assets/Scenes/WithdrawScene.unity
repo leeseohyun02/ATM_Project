@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 28071249}
   - component: {fileID: 28071248}
   m_Layer: 5
-  m_Name: Balance
+  m_Name: Banlance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1949,7 +1949,7 @@ GameObject:
   - component: {fileID: 897533372}
   - component: {fileID: 897533371}
   m_Layer: 5
-  m_Name: BalanceTitleText
+  m_Name: BanlanceTitleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3470,7 +3470,7 @@ GameObject:
   - component: {fileID: 1751705672}
   - component: {fileID: 1751705671}
   m_Layer: 5
-  m_Name: BalanceText
+  m_Name: BanlanceText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

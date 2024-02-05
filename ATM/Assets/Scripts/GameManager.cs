@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public GameData gameData;
 
     public TextMeshProUGUI cashTxt;
-    public TextMeshProUGUI balanceTxt;
+    public TextMeshProUGUI banlanceTxt;
     public TextMeshProUGUI playerNameTxt;
 
     private void Awake()
@@ -43,6 +43,6 @@ public class GameManager : MonoBehaviour
     public void updateText()
     {
         cashTxt.text = gameData.cash.ToString("#,##0");
-        balanceTxt.text = gameData.balance.ToString("#,##0");
+        banlanceTxt.text = gameData.banlance.ToString("#,##0");
     }
 }

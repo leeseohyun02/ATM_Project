@@ -18,7 +18,7 @@ public class Deposit : MonoBehaviour
     public GameData gameData;
 
     public TextMeshProUGUI cashTxt;
-    public TextMeshProUGUI balanceTxt;
+    public TextMeshProUGUI banlanceTxt;
 
     public GameObject popUp;
 
@@ -42,7 +42,7 @@ public class Deposit : MonoBehaviour
         }
       
         gameData.cash -= amount;
-        gameData.balance += amount;
+        gameData.banlance += amount;
 
 
         updateText();
@@ -82,7 +82,7 @@ public class Deposit : MonoBehaviour
     private void updateText()
     {
         cashTxt.text = gameData.cash.ToString("#,##0");
-        balanceTxt.text = gameData.balance.ToString("#,##0");
+        banlanceTxt.text = gameData.banlance.ToString("#,##0");
     }
 
     public void onCheckBtn()
