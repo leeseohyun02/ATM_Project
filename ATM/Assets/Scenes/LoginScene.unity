@@ -1023,8 +1023,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adeabb1fb900d0e4793b84bc0f5259ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _id: {fileID: 1521124074}
-  _password: {fileID: 935853696}
+  _idInput: {fileID: 1521124074}
+  _passwordInput: {fileID: 935853696}
   loginUi: {fileID: 449298649}
   mainUi: {fileID: 0}
   signUpUi: {fileID: 1493209249}
@@ -1459,7 +1459,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 666431255}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1493209254}
+        m_TargetAssemblyTypeName: SignUp, Assembly-CSharp
+        m_MethodName: inputSignUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &666431255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1597,7 +1609,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 733702267}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1493209254}
+        m_TargetAssemblyTypeName: SignUp, Assembly-CSharp
+        m_MethodName: onClickCancel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &733702267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2094,7 +2118,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 294.99997, y: 308.0001}
+  m_AnchoredPosition: {x: 294.99997, y: 2}
   m_SizeDelta: {x: 350, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &902226926
@@ -3061,10 +3085,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff13d44d6e99f994b9bcc6a878f9d5e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _id: {fileID: 1606323208}
-  _name: {fileID: 437547265}
-  _password: {fileID: 95066017}
-  _passwordConfirm: {fileID: 902226924}
+  _idInput: {fileID: 1606323208}
+  _nameInput: {fileID: 437547265}
+  _passwordInput: {fileID: 95066017}
+  _passwordConfirmInput: {fileID: 902226924}
+  signUpUi: {fileID: 1493209249}
 --- !u!1 &1521124072
 GameObject:
   m_ObjectHideFlags: 0

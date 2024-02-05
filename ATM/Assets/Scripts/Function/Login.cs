@@ -6,11 +6,11 @@ using UnityEngine.UI;
 
 public class Login : MonoBehaviour
 {
-    public InputField _id;
-    public InputField _password;
+    public InputField _idInput;
+    public InputField _passwordInput;
 
-    private string _playerId = "aa";
-    private string _playerPw = "aa";
+    private string _playerId;
+    private string _playerPw;
 
     public GameObject loginUi;
     public GameObject mainUi;
@@ -18,11 +18,12 @@ public class Login : MonoBehaviour
 
     public void inputLogin()
     {
-        if(_id.text == _playerId && _password.text == _playerPw)
-        {
-            _playerId = _id.text;
-            _password.text = _playerPw;
+        _playerId = _idInput.text;
+        _playerPw = _passwordInput.text;
 
+        if(CheckLogin(_playerId,_playerPw))
+        {
+            Debug.Log("로그인 성공");
             SceneManager.LoadScene("MainScene");
         }
         else
@@ -30,6 +31,11 @@ public class Login : MonoBehaviour
             Debug.Log("로그인 실패");
         }
         
+    }
+    private bool CheckLogin(string playerId, string playerPw)
+    {
+        string checkId = PlayerPrefs.GetString(playerId, "");
+        return checkId == playerPw;
     }
 
     public void signUpBtn()
