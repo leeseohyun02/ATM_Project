@@ -28,6 +28,8 @@ public class Login : MonoBehaviour
         }
         else
         {
+            _idInput.text = "";
+            _passwordInput.text = "";
             Debug.Log("로그인 실패");
         }
         

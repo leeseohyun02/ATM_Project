@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI cashTxt;
     public TextMeshProUGUI balanceTxt;
-   
+
 
     private void Awake()
     {
