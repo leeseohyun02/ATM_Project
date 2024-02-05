@@ -13,7 +13,6 @@ public class Login : MonoBehaviour
     private string _playerPw;
 
     public GameObject loginUi;
-    public GameObject mainUi;
     public GameObject signUpUi;
 
     public void inputLogin()
