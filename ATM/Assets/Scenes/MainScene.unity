@@ -514,7 +514,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 932285715}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: onClickWithdrow
         m_Mode: 1
@@ -1455,7 +1455,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 932285715}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: onClickDeposit
         m_Mode: 1

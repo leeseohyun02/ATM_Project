@@ -22,7 +22,6 @@ public class Deposit : MonoBehaviour
 
     public GameObject popUp;
 
-
     void Start()
     {
         _inputField.onValueChanged.AddListener(textChanged);

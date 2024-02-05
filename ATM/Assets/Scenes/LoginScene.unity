@@ -3302,7 +3302,7 @@ MonoBehaviour:
   _passwordInput: {fileID: 95066017}
   _passwordConfirmInput: {fileID: 902226924}
   signUpUi: {fileID: 1493209249}
-  errorText: {fileID: 0}
+  errorText: {fileID: 564216477}
 --- !u!1 &1521124072
 GameObject:
   m_ObjectHideFlags: 0

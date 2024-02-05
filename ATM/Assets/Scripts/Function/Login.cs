@@ -21,7 +21,10 @@ public class Login : MonoBehaviour
         _playerId = _idInput.text;
         _playerPw = _passwordInput.text;
 
-        if(CheckLogin(_playerId,_playerPw))
+        string _storeId = PlayerPrefs.GetString("PlayerID");
+        string _storePw = PlayerPrefs.GetString("PlayerPW");
+
+        if (_playerId == _storeId && _playerPw == _storePw)
         {
             Debug.Log("로그인 성공");
             SceneManager.LoadScene("MainScene");
@@ -33,11 +36,6 @@ public class Login : MonoBehaviour
             Debug.Log("로그인 실패");
         }
         
-    }
-    private bool CheckLogin(string playerId, string playerPw)
-    {
-        string checkId = PlayerPrefs.GetString(playerId, "");
-        return checkId == playerPw;
     }
 
     public void signUpBtn()

@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI cashTxt;
     public TextMeshProUGUI balanceTxt;
-
+    public TextMeshProUGUI playerNameTxt;
 
     private void Awake()
     {
@@ -21,11 +21,11 @@ public class GameManager : MonoBehaviour
             I = this;
             DontDestroyOnLoad(gameObject);
         }
-
     }
     // Start is called before the first frame update
     void Start()
     {
+        playerNameTxt.text = PlayerPrefs.GetString("PlayerName");
         updateText();
     }
 

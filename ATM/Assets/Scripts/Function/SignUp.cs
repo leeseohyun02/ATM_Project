@@ -68,7 +68,10 @@ public class SignUp : MonoBehaviour
             return;
         }
 
-        PlayerPrefs.SetString(_playerId, _playerPassword);
+        PlayerPrefs.SetString("PlayerID", _playerId);
+        PlayerPrefs.SetString("PlayerPW", _playerPassword);
+        PlayerPrefs.SetString("PlayerName", _playerName);
+
         PlayerPrefs.Save();
 
         Debug.Log("사용자 등록 완료 : " +  _playerName);
