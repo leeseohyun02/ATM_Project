@@ -25,9 +25,7 @@ public class Deposit : MonoBehaviour
 
     void Start()
     {
-       // _inputField.contentType = InputField.ContentType.IntegerNumber;
         _inputField.onValueChanged.AddListener(textChanged);
-
 
     }
 

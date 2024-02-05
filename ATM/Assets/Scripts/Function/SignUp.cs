@@ -1,18 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SignUp : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private InputField _id;
+    [SerializeField] private InputField _name;
+    [SerializeField] private InputField _password;
+    [SerializeField] private InputField _passwordConfirm;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

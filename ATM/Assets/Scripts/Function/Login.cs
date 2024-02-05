@@ -1,28 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Login : MonoBehaviour
 {
-    [SerializeField]private InputField _id;
-    [SerializeField]private InputField _password;
-    [SerializeField]private string _playerId;
-    [SerializeField] private string _playerPw;
+    public InputField _id;
+    public InputField _password;
+
+    private string _playerId = "aa";
+    private string _playerPw = "aa";
 
     public GameObject loginUi;
     public GameObject mainUi;
-
+    public GameObject signUpUi;
 
     public void inputLogin()
     {
-        if(!string.IsNullOrEmpty(_playerId) && !string.IsNullOrEmpty(_playerPw))
+        if(_id.text == _playerId && _password.text == _playerPw)
         {
             _playerId = _id.text;
             _password.text = _playerPw;
-        }
 
-        loginUi.SetActive(false);
-        mainUi.SetActive(true);
+            SceneManager.LoadScene("MainScene");
+        }
+        else
+        {
+            Debug.Log("로그인 실패");
+        }
+        
+    }
+
+    public void signUpBtn()
+    {
+        signUpUi.SetActive(true);
     }
 }
