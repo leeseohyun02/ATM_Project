@@ -2040,8 +2040,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inputField: {fileID: 1415773327}
   _playerInput: 0
+  gameData: {fileID: 11400000, guid: 9d2b287c4fa1730499f79f5c5f28dbb8, type: 2}
   cashTxt: {fileID: 2067312975}
-  banlanceTxt: {fileID: 1751705671}
+  balanceTxt: {fileID: 1751705671}
   popUp: {fileID: 1250355939}
 --- !u!1 &1250355939
 GameObject:

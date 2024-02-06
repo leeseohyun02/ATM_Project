@@ -36,14 +36,14 @@ public class Withdraw : MonoBehaviour
 
     private void depositAmount(int amount)
     {
-        if (GameManager.I.player.playerBanlance < amount)
+        if (gameData.banlance < amount)
         {
             popUp.SetActive(true);
             return;
         }
 
-        GameManager.I.player.playerCash += amount;
-        GameManager.I.player.playerBanlance -= amount;
+        gameData.cash += amount;
+        gameData.banlance -= amount;
 
     }
 
@@ -80,8 +80,8 @@ public class Withdraw : MonoBehaviour
 
     private void updateText()
     {
-        cashTxt.text = GameManager.I.player.playerCash.ToString("#,##0");
-        banlanceTxt.text = GameManager.I.player.playerBanlance.ToString("#,##0");
+        cashTxt.text = gameData.cash.ToString("#,##0");
+        banlanceTxt.text = gameData.banlance.ToString("#,##0");
     }
 
     public void onCheckBtn()
