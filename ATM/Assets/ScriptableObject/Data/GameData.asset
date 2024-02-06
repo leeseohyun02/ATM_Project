@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: GameData
   m_EditorClassIdentifier: 
   cash: 100000
-  balance: 50000
+  banlance: 50000

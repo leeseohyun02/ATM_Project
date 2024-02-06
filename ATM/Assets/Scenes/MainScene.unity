@@ -975,7 +975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameData: {fileID: 11400000, guid: 9d2b287c4fa1730499f79f5c5f28dbb8, type: 2}
   cashTxt: {fileID: 1725207981}
-  balanceTxt: {fileID: 1690487364}
+  banlanceTxt: {fileID: 1690487364}
   playerNameTxt: {fileID: 347524519}
 --- !u!1 &975132212
 GameObject:
