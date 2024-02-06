@@ -38,14 +38,18 @@ public class SignUp : MonoBehaviour
             errorText.text = "모두 입력해 주세요.";
             return;
         }
-
-        if(PlayerPrefs.HasKey(_playerId)) 
+        
+        foreach(var player in GameManager.I.playerInfo)
         {
-            errorText.text = "이미 존재하는 사용자 입니다.";
-            return;
-        }
+            if(player.playerId == _playerId)
+            {
+                errorText.text = "이미 존재하는 사용자 입니다.";
+                return;
+            }
+            
+        }                  
 
-        if(!(3<=_playerId.Length && _playerId.Length<=10))
+        if (!(3 <= _playerId.Length && _playerId.Length <= 10))
         {
             errorText.text = "ID는 3~10글자 사이의 영어, 숫자만 입력 가능합니다.";
             return;
@@ -68,19 +72,16 @@ public class SignUp : MonoBehaviour
             return;
         }
 
-        PlayerPrefs.SetString("PlayerID", _playerId);
-        PlayerPrefs.SetString("PlayerPW", _playerPassword);
-        PlayerPrefs.SetString("PlayerName", _playerName);
+        PlayerInfo newPlayer = new PlayerInfo(_playerId, _playerName, _playerPassword, 100000, 20000);
+        GameManager.I.playerInfo.Add(newPlayer);
 
-        PlayerPrefs.Save();
-
-        Debug.Log("사용자 등록 완료 : " +  _playerName);
-
+        Debug.Log("사용자 등록 완료 : " + _playerName);
+        Debug.Log(GameManager.I.playerInfo.Count);
         signUpUi.SetActive(false);
 
     }
 
-    
+   
     public void onClickCancel()
     {
         signUpUi.SetActive(false);

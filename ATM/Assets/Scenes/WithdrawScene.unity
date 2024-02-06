@@ -2202,7 +2202,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inputField: {fileID: 1415773327}
   _playerInput: 0
-  gameData: {fileID: 11400000, guid: 9d2b287c4fa1730499f79f5c5f28dbb8, type: 2}
   cashTxt: {fileID: 2067312975}
   banlanceTxt: {fileID: 1751705671}
   popUp: {fileID: 272291976}
@@ -3516,9 +3515,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '50,000
-
-'
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5f6d9ced66fcf2f46a66f787b0e53ce0, type: 2}
   m_sharedMaterial: {fileID: 9110465799078496784, guid: 5f6d9ced66fcf2f46a66f787b0e53ce0, type: 2}
@@ -3994,7 +3991,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100,000
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5f6d9ced66fcf2f46a66f787b0e53ce0, type: 2}
   m_sharedMaterial: {fileID: 9110465799078496784, guid: 5f6d9ced66fcf2f46a66f787b0e53ce0, type: 2}

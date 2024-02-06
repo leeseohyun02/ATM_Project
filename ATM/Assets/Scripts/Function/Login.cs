@@ -23,17 +23,21 @@ public class Login : MonoBehaviour
         string _storeId = PlayerPrefs.GetString("PlayerID");
         string _storePw = PlayerPrefs.GetString("PlayerPW");
 
-        if (_playerId == _storeId && _playerPw == _storePw)
+        foreach(var player in GameManager.I.playerInfo)
         {
-            Debug.Log("로그인 성공");
-            SceneManager.LoadScene("MainScene");
-        }
-        else
-        {
-            _idInput.text = "";
-            _passwordInput.text = "";
-            Debug.Log("로그인 실패");
-        }
+            if (_playerId == player.playerId && _playerPw == player.playerPw)
+            {
+                Debug.Log("로그인 성공");
+                GameManager.I.player = player;
+                SceneManager.LoadScene("MainScene");
+            }
+            else
+            {
+                _idInput.text = "";
+                _passwordInput.text = "";
+                Debug.Log("로그인 실패");
+            }
+        }   
         
     }
 

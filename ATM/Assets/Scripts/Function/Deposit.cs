@@ -30,6 +30,7 @@ public class Deposit : MonoBehaviour
 
     void Update()
     {
+        
         updateText();
     }
 
@@ -44,8 +45,6 @@ public class Deposit : MonoBehaviour
         gameData.cash -= amount;
         gameData.banlance += amount;
 
-
-        updateText();
     }
 
     public void tenThousand()
