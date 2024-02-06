@@ -44,8 +44,12 @@ public class SignUp : MonoBehaviour
         
         foreach(var player in GameManager.I.playerInfo)
         {
-            errorText.text = "이미 존재하는 사용자 입니다.";
-            return;
+            if(player.playerId == _playerId)
+            {
+                errorText.text = "이미 존재하는 사용자 입니다.";
+                return;
+            }
+            
         }                  
 
         if (!(3 <= _playerId.Length && _playerId.Length <= 10))
@@ -75,7 +79,7 @@ public class SignUp : MonoBehaviour
         GameManager.I.playerInfo.Add(newPlayer);
 
         Debug.Log("사용자 등록 완료 : " + _playerName);
-
+        Debug.Log(GameManager.I.playerInfo.Count);
         signUpUi.SetActive(false);
 
     }

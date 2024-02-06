@@ -28,6 +28,7 @@ public class Login : MonoBehaviour
             if (_playerId == player.playerId && _playerPw == player.playerPw)
             {
                 Debug.Log("로그인 성공");
+                GameManager.I.player = player;
                 SceneManager.LoadScene("MainScene");
             }
             else
