@@ -973,10 +973,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c51a4ce9ed3f142bf501d4651ddc67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameData: {fileID: 11400000, guid: 9d2b287c4fa1730499f79f5c5f28dbb8, type: 2}
   cashTxt: {fileID: 1725207981}
-  balanceTxt: {fileID: 1690487364}
+  banlanceTxt: {fileID: 1690487364}
   playerNameTxt: {fileID: 347524519}
+  playerInfo: []
+  player: {fileID: 0}
 --- !u!1 &975132212
 GameObject:
   m_ObjectHideFlags: 0

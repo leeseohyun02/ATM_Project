@@ -15,12 +15,11 @@ public class Deposit : MonoBehaviour
     private const int _thirtyThousand = 30000;
     private const int _fiftyThousand = 50000;
 
-    public GameData gameData;
-
     public TextMeshProUGUI cashTxt;
     public TextMeshProUGUI banlanceTxt;
 
     public GameObject popUp;
+
 
     void Start()
     {
@@ -35,14 +34,14 @@ public class Deposit : MonoBehaviour
 
     private void depositAmount(int amount)
     {
-        if (gameData.cash < amount)
+        if (GameManager.I.player.playerCash < amount)
         {
             popUp.SetActive(true);
             return;
         }
-      
-        gameData.cash -= amount;
-        gameData.banlance += amount;
+
+        GameManager.I.player.playerCash -= amount;
+        GameManager.I.player.playerBanlance += amount;
 
 
         updateText();
@@ -81,8 +80,8 @@ public class Deposit : MonoBehaviour
 
     private void updateText()
     {
-        cashTxt.text = gameData.cash.ToString("#,##0");
-        banlanceTxt.text = gameData.banlance.ToString("#,##0");
+        cashTxt.text = GameManager.I.player.playerCash.ToString("#,##0");
+        banlanceTxt.text = GameManager.I.player.playerBanlance.ToString("#,##0");
     }
 
     public void onCheckBtn()

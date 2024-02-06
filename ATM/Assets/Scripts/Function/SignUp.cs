@@ -15,11 +15,14 @@ public class SignUp : MonoBehaviour
     private string _playerName;
     private string _playerPassword;
     private string _plaeryPC;
+    private int _playerCash;
+    private int _plaeyrBanlance;
 
     public GameObject signUpUi;
 
     public TextMeshProUGUI errorText;
 
+    private GameManager gameManager;
     public void inputSignUp()
     {
         _playerId = _idInput.text;
@@ -27,31 +30,32 @@ public class SignUp : MonoBehaviour
         _playerPassword = _passwordInput.text;
         _plaeryPC = _passwordConfirmInput.text;
 
-        inputCheck();    
+        onClickInputCheck();    
 
     }
-    private void inputCheck()
+    private void onClickInputCheck()
     {
+
         if (string.IsNullOrEmpty(_playerId) || string.IsNullOrEmpty(_playerName)
-            || string.IsNullOrEmpty(_playerPassword) || string.IsNullOrEmpty(_plaeryPC))
+        || string.IsNullOrEmpty(_playerPassword) || string.IsNullOrEmpty(_plaeryPC))
         {
             errorText.text = "모두 입력해 주세요.";
             return;
         }
 
-        if(PlayerPrefs.HasKey(_playerId)) 
+        if (_playerId == gameManager.player.playerId)
         {
             errorText.text = "이미 존재하는 사용자 입니다.";
             return;
         }
 
-        if(!(3<=_playerId.Length && _playerId.Length<=10))
+        if (!(3 <= _playerId.Length && _playerId.Length <= 10))
         {
             errorText.text = "ID는 3~10글자 사이의 영어, 숫자만 입력 가능합니다.";
             return;
         }
 
-        if(!(2<=_playerName.Length && _playerName.Length <= 5))
+        if (!(2 <= _playerName.Length && _playerName.Length <= 5))
         {
             errorText.text = "Name은 2~5글자만 가능합니다.";
             return;
@@ -68,15 +72,14 @@ public class SignUp : MonoBehaviour
             return;
         }
 
-        PlayerPrefs.SetString("PlayerID", _playerId);
-        PlayerPrefs.SetString("PlayerPW", _playerPassword);
-        PlayerPrefs.SetString("PlayerName", _playerName);
+        PlayerInfo newPlayer = new PlayerInfo(_playerId, _playerName, _playerPassword, 100000, 20000);
+        GameManager.I.playerInfo.Add(newPlayer);
+            
 
-        PlayerPrefs.Save();
-
-        Debug.Log("사용자 등록 완료 : " +  _playerName);
+        Debug.Log("사용자 등록 완료 : " + _playerName);
 
         signUpUi.SetActive(false);
+
 
     }
 

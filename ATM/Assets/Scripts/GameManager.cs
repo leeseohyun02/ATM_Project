@@ -8,11 +8,12 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager I;
 
-    public GameData gameData;
-
     public TextMeshProUGUI cashTxt;
     public TextMeshProUGUI banlanceTxt;
     public TextMeshProUGUI playerNameTxt;
+
+    public List<PlayerInfo> playerInfo = new List<PlayerInfo>();
+    public PlayerInfo player;
 
     private void Awake()
     {
@@ -21,11 +22,15 @@ public class GameManager : MonoBehaviour
             I = this;
             DontDestroyOnLoad(gameObject);
         }
+        else
+        {
+            Destroy(this.gameObject);
+        }
     }
     // Start is called before the first frame update
     void Start()
     {
-        playerNameTxt.text = PlayerPrefs.GetString("PlayerName");
+        playerNameTxt.text = player.playerName;
         updateText();
     }
 
@@ -42,7 +47,7 @@ public class GameManager : MonoBehaviour
 
     public void updateText()
     {
-        cashTxt.text = gameData.cash.ToString("#,##0");
-        banlanceTxt.text = gameData.banlance.ToString("#,##0");
+        cashTxt.text = player.playerCash.ToString("#,##0");
+        banlanceTxt.text = player.playerBanlance.ToString("#,##0");
     }
 }
