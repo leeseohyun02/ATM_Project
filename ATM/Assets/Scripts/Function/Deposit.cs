@@ -29,6 +29,7 @@ public class Deposit : MonoBehaviour
 
     void Update()
     {
+        
         updateText();
     }
 
@@ -43,8 +44,6 @@ public class Deposit : MonoBehaviour
         GameManager.I.player.playerCash -= amount;
         GameManager.I.player.playerBanlance += amount;
 
-
-        updateText();
     }
 
     public void tenThousand()

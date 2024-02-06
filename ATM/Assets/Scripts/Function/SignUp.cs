@@ -22,7 +22,6 @@ public class SignUp : MonoBehaviour
 
     public TextMeshProUGUI errorText;
 
-    private GameManager gameManager;
     public void inputSignUp()
     {
         _playerId = _idInput.text;
@@ -42,12 +41,12 @@ public class SignUp : MonoBehaviour
             errorText.text = "모두 입력해 주세요.";
             return;
         }
-
-        if (_playerId == gameManager.player.playerId)
+        
+        foreach(var player in GameManager.I.playerInfo)
         {
             errorText.text = "이미 존재하는 사용자 입니다.";
             return;
-        }
+        }                  
 
         if (!(3 <= _playerId.Length && _playerId.Length <= 10))
         {
@@ -74,16 +73,14 @@ public class SignUp : MonoBehaviour
 
         PlayerInfo newPlayer = new PlayerInfo(_playerId, _playerName, _playerPassword, 100000, 20000);
         GameManager.I.playerInfo.Add(newPlayer);
-            
 
         Debug.Log("사용자 등록 완료 : " + _playerName);
 
         signUpUi.SetActive(false);
 
-
     }
 
-    
+   
     public void onClickCancel()
     {
         signUpUi.SetActive(false);

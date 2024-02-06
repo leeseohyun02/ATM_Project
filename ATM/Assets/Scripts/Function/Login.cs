@@ -36,8 +36,7 @@ public class Login : MonoBehaviour
                 _passwordInput.text = "";
                 Debug.Log("로그인 실패");
             }
-        }
-       
+        }   
         
     }
 

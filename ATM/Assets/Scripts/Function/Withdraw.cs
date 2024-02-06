@@ -15,8 +15,6 @@ public class Withdraw : MonoBehaviour
     private const int _thirtyThousand = 30000;
     private const int _fiftyThousand = 50000;
 
-    public GameData gameData;
-
     public TextMeshProUGUI cashTxt;
     public TextMeshProUGUI banlanceTxt;
 
