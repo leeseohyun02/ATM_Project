@@ -72,7 +72,7 @@ public class SignUp : MonoBehaviour
             return;
         }
 
-        PlayerInfo newPlayer = new PlayerInfo(_playerId, _playerName, _playerPassword, 100000, 20000);
+        PlayerInfo newPlayer = new PlayerInfo(_playerId, _playerName, _playerPassword, 100000, 50000);
         GameManager.I.playerInfo.Add(newPlayer);
 
         Debug.Log("사용자 등록 완료 : " + _playerName);

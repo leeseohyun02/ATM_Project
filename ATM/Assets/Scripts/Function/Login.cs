@@ -20,8 +20,6 @@ public class Login : MonoBehaviour
         _playerId = _idInput.text;
         _playerPw = _passwordInput.text;
 
-        string _storeId = PlayerPrefs.GetString("PlayerID");
-        string _storePw = PlayerPrefs.GetString("PlayerPW");
 
         foreach(var player in GameManager.I.playerInfo)
         {

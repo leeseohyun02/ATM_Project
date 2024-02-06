@@ -24,7 +24,6 @@ public class Deposit : MonoBehaviour
     void Start()
     {
         _inputField.onValueChanged.AddListener(textChanged);
-
     }
 
     void Update()
