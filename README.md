@@ -18,13 +18,27 @@
 
 회원가입 - 아이디, 이름, 비밀번호, 재확인 비밀번호로 구성 
 
+![image](https://github.com/leeseohyun02/Raindrop/assets/78461967/a438f6a8-94b1-47ea-90c5-3e4019373a1b)
+![image](https://github.com/leeseohyun02/Raindrop/assets/78461967/165e7834-8a15-4342-8d79-bfcfd4739b46)
+
 로그인 - 생성한 아이디를 비교해서 로그인 여부  
+
+![image](https://github.com/leeseohyun02/Raindrop/assets/78461967/8092c428-649b-4e9c-89ad-eaecfd3b9d75)
+![image](https://github.com/leeseohyun02/Raindrop/assets/78461967/9005dfe8-4aef-447e-a958-76954516bf2e)
 
 
 입금 기능 - 현재 가지고 있는 금액이 넣고자 하는 금액보다 적을 때 경고 팝업 표시 
 
+![image](https://github.com/leeseohyun02/Raindrop/assets/78461967/4fad96e1-8d29-4763-a4bc-6ae816715176)  
+![image](https://github.com/leeseohyun02/Raindrop/assets/78461967/66c9db14-e911-44ce-a84f-6968f19ba62b)  
+![image](https://github.com/leeseohyun02/Raindrop/assets/78461967/c2166487-d4f8-4715-9a16-115f1dccdcc6)
+
 
 출금 기능 - 계좌에 있는 금액이 빼고자 하는 금액보다 적을 때 경고 팝업 표시   
+
+![image](https://github.com/leeseohyun02/Raindrop/assets/78461967/c9fdb3a5-a4f1-4436-85bf-02d5373d9a81)  
+![image](https://github.com/leeseohyun02/Raindrop/assets/78461967/a0ed1a31-ac7e-47be-a967-7bbeb13e4fc5)
+
 
 ----
 
